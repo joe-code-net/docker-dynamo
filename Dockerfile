@@ -1,7 +1,8 @@
 # DynamoDB in Docker
 #
-# Documentation:# https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html## Use JDK version 6.x or newer
+# Documentation:# https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
 #
+# Use JDK version 6.x or newer
 # FROM openjdk:latest
 FROM openjdk
 
@@ -20,3 +21,5 @@ EXPOSE 8000
 
 #The entrypoint for DynamoDB jar
 ENTRYPOINT ["java", "-jar", "DynamoDBLocal.jar", "-sharedDb"]
+
+CMD ["-help"]
